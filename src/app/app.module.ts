@@ -5,11 +5,11 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule, Routes } from '@angular/router';
-import 'hammerjs';
 import { AngularFireModule, AuthMethods, AuthProviders } from "angularfire2";
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { RumorComponent } from './rumor/rumor.component';
+import { RumorComponent, DialogAddRumorComponent } from './rumor/rumor.component';
 
 const appRoutes: Routes = [
   {
@@ -33,8 +33,10 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    RumorComponent
+    RumorComponent,
+    DialogAddRumorComponent
   ],
+  entryComponents: [DialogAddRumorComponent],
   imports: [
     BrowserModule,
     FormsModule,
